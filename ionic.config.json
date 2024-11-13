@@ -1,0 +1,7 @@
+{
+  "name": "prakmobile-firebase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
