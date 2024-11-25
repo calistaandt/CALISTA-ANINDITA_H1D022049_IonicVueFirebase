@@ -2,6 +2,9 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
+import { getFirestore } from 'firebase/firestore';
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyBWmWphsrmNdw2Zqvzfqxi16Ov8PtOZBPE",
   authDomain: "prakmobile-firebase.firebaseapp.com",
@@ -15,4 +18,6 @@ const firebase = initializeApp(firebaseConfig);
 const auth = getAuth(firebase);
 const googleProvider = new GoogleAuthProvider();
 
-export { auth, googleProvider };
+const db = getFirestore(firebase);
+
+export { auth, googleProvider, db };

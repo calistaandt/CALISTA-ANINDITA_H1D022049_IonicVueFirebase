@@ -1,3 +1,5 @@
+Tugas 9 Pertemuan 10
+
 Penjelasan mengenai cara kerja autentikasi login menggunakan firebase hingga aplikasi mendapatkan username dan profil kita dari akun google
 
 1.  Melakukan inisialisasi pada file src/utils/firebase.ts
@@ -31,3 +33,34 @@ Penjelasan mengenai cara kerja autentikasi login menggunakan firebase hingga apl
     ** value="user?.displayName": menampilkan nama pengguna yang login menggunakan Google.
     ** value="user?.email": menampilkan email pengguna yang login menggunakan Google.
     ** ![Data Pengguna](image-4.png): data pengguna diambil dari store (authStore.user) dan diakses secara reaktif menggunakan computed.
+
+
+========================================================================================================================
+
+Tugas 10 Pertemuan 11
+
+CRUD ToDo
+
+1.  Create ToDo
+    ** const todoRef = this.getTodoRef(): mendapatkan referensi ke koleksi todo yang dimiliki pengguna.
+    ** addDoc(): method yang ada pada firebase firestore yang digunakan untuk menambahkan dokumen ke koleksi.
+    ** ...todo: menambahkan properti yang diterima dari parameter todo.
+    ** return docRef.id: mengembalikan ID dari dokumen baru yang dibuat.
+    ** ![Halaman Create ToDo](image-7.png)
+
+2.  Read ToDo
+    ** const q = query(todoRef, orderBy('updatedAt', 'desc')): query untuk mengurutkan hasil berdasarkan waktu pembaruan (descending).
+    ** const snapshot = await getDocs(q): query untuk mendapatkan dokumen-dokumen dari koleksi.
+    ** id: doc.id: menambahkan id dokumen ke data menggunakan doc.id.
+    ** ![Halaman Read ToDo](image-8.png)
+
+3.  Update ToDo
+    ** const docRef = doc(todoRef, id): untuk mendapatkan dokumen tertentu dalam koleksi berdasarkan id.
+    ** updateDoc(): untuk memperbarui dokumen.
+    ** ...todo: data yang akan diperbarui.
+    ** ![Halaman Update ToDo](image-9.png)
+    ** ![Tampilan Setelah Diupdate](image-10.png)
+
+4.  Delete ToDo
+    ** await deleteDoc(docRef): menghapus dokumen dari Firestore.
+    ** ![Tampilan Delete ToDo](image-11.png)
