@@ -64,3 +64,25 @@ CRUD ToDo
 4.  Delete ToDo
     ** await deleteDoc(docRef): menghapus dokumen dari Firestore.
     ** ![Tampilan Delete ToDo](image-11.png)
+
+
+
+Langkah-Langkah Build Ionic Ke Dalam Bentuk Apk
+
+1.  ionic build
+    ![alt text](image-12.png)
+
+2.  ionic cap sync
+    ![alt text](image-13.png)
+
+3.  ionic cap open android
+    ![alt text](image-14.png)
+
+4.  Build Variant
+    ![alt text](image-15.png)
+
+5.  Build APK(s)
+    ![alt text](image-16.png)
+
+6.  File APK
+    ![alt text](image-17.png)
